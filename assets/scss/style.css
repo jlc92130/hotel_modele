@@ -1,0 +1,214 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'open-sans';
+  src: url("../fonts/open-sans/OpenSans-Regular.ttf"); }
+@font-face {
+  font-family: 'open-sans-bold';
+  src: url("../fonts/open-sans/OpenSans-Bold.ttf"); }
+@font-face {
+  font-family: 'Roboto';
+  src: url("../fonts/roboto/Roboto-Regular-webfont.woff"); }
+@font-face {
+  font-family: 'playfair_display';
+  src: url("../fonts/Playfair_Display/PlayfairDisplay-Italic-VariableFont_wght.ttf"); }
+html {
+  font-family: 'Roboto'; }
+
+body {
+  background-color: #2b292f; }
+
+figure {
+  margin: 0; }
+
+h1 {
+  font-family: open-sans;
+  color: #ffffff;
+  text-align: center; }
+
+h2 {
+  color: #ffffff;
+  font-size: 18px;
+  text-align: center; }
+
+/**  Section à propos   **/
+h1 {
+  font-size: 4vh; }
+
+p {
+  color: #D49437;
+  font-size: 54px;
+  line-height: 0;
+  height: 0;
+  text-align: center; }
+
+video {
+  position: relative;
+  transform: translateY(-25%);
+  object-fit: fill;
+  height: 400px;
+  width: 100vw;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  z-index: -1; }
+
+.menu-container {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: end;
+  height: 100px;
+  width: 100%;
+  background-color: black;
+  opacity: 0.6;
+  padding: 0 10; }
+
+ul {
+  list-style: none; }
+
+nav {
+  position: absolute;
+  transform: translateY(50%);
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%); }
+  nav ul {
+    display: flex;
+    gap: 1em; }
+    nav ul li {
+      position: relative;
+      flex: 1 0 auto;
+      font-family: Roboto; }
+      nav ul li a {
+        text-decoration: none;
+        color: white; }
+      nav ul li:hover a {
+        font-size: 1.2em; }
+      nav ul li ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        left: -999em;
+        text-align: left; }
+      nav ul li:hover ul {
+        position: absolute;
+        left: 0px; }
+        nav ul li:hover ul:hover a {
+          color: white;
+          font-size: 1.2em; }
+
+.slider-container {
+  height: 600px;
+  width: 50%;
+  position: relative;
+  overflow: hidden;
+  text-align: center; }
+
+.menu {
+  position: absolute;
+  z-index: 900;
+  width: 100%;
+  bottom: 0; }
+
+.menu label {
+  cursor: pointer;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  border-radius: 50px;
+  margin: 0 0.2em 1em; }
+
+.menu label:hover, .menu label:focus {
+  background: #1c87c9; }
+
+.slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  z-index: 10;
+  padding: 8em 1em 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  transition: left 0s 0.75s; }
+
+.slide-1 {
+  background-image: url("/assets/img/chambres/anantara_new_york_palace_budapest_hotel_984x532_room_1.webp"); }
+
+.slide-2 {
+  background-image: url("/assets/img/chambres/anantara_new_york_palace_budapest_hotel_984x532_suite_1.webp"); }
+
+[id^="slide"]:checked + .slide {
+  left: 0;
+  z-index: 100;
+  transition: left 0.65s ease-out; }
+
+#map {
+  width: 50vw;
+  z-index: -1; }
+
+#map + article {
+  color: #fff; }
+  #map + article a {
+    color: #fff; }
+
+footer {
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black; }
+  footer .footer__social {
+    display: flex;
+    justify-content: space-around;
+    gap: 3em; }
+    footer .footer__social .footer__social-item i {
+      font-size: 40px;
+      color: rgba(255, 255, 255, 0.7);
+      cursor: pointer;
+      transition-duration: 0.7s; }
+      footer .footer__social .footer__social-item i:hover {
+        color: #6262ec; }
+
+input {
+  background-color: #f6eeee;
+  margin-right: 50px;
+  display: inline-block;
+  height: 40px;
+  width: 70px; }
+
+.menu-container .book {
+  --box-shadow-color: rgb(255, 255, 255);
+  box-shadow: 0 0.5em 0.5em -0.4em var(--box-shadow-color);
+  transition: 0.3;
+  transform: translateY(-0.35em);
+  background-color: black;
+  color: white;
+  cursor: pointer; }
+
+@media screen and (min-width: 480px) and (max-width: 779px) {
+  h1 {
+    font-size: 7vh; }
+
+  .mobile-menu {
+    display: none; }
+
+  .mobile {
+    display: none; }
+
+  .formation__container {
+    display: flex;
+    flex-wrap: wrap; }
+    .formation__container article {
+      width: 45%; } }
+@media screen and (max-width: 480px) {
+  .desktop {
+    display: none; }
+
+  .mobile-menu {
+    display: show; } }
+
+/*# sourceMappingURL=style.css.map */

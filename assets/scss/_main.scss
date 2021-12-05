@@ -1,0 +1,305 @@
+html {
+    font-family: 'Roboto';
+}
+
+body {
+  background-color: $background;
+}
+ 
+
+figure {
+    margin: 0 auto;
+}
+
+
+
+
+
+p {
+  text-align: center;
+  font-size: 1vw;
+  margin: 0;
+  padding: 30px;
+  color: #fff;
+}
+
+h1 {
+  font-size: 1vw;
+  margin-left: 50px;
+  color: $tersary_color;
+  font-family: open-sans;
+  text-align: center;
+}
+
+h2 {
+color: $tersary_color;
+font-size: 2vw;
+line-height: 0;
+text-align: center;
+margin: 5;
+padding: 20px;
+}
+
+h3 {
+  color: #ffffff;
+  line-height: 50px;
+  margin: 0 10vw;
+  font-size: 2vw;
+
+  span {
+    text-align: justify;
+  }
+}
+ 
+
+.titre {
+  text-align: center;
+  font-size: 3vw;
+}
+
+ 
+ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+ 
+// ************************* VIDEO **********************************   //
+
+video {
+  margin-top: -100px;
+  object-fit: fill; // to not respect video ratio
+  height: 400px;    // of the container parent
+  width: 100%;
+  z-index: -1;
+}
+
+//*************  NAVBAR MENU ***********************//
+
+
+.menu-container {
+  display: flex;
+  position: fixed;
+  top: 0;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  width: 100%;
+  background-color: black;
+  opacity: 0.6;
+}
+
+nav {
+
+  ul {
+      display: flex;
+      gap: 1em;
+      list-style: none;
+      font-size: 12px;
+     
+      li {
+         flex: 1 0 auto; // le texte dans le li ne passe pas à la ligne
+         font-family: Roboto;
+          padding: 0;
+        a {
+          text-decoration: none;
+          color: $white;
+        }
+        &:hover a {
+          font-size:1.2em;
+        }
+
+        // &:hover ul {
+        //   position: relative;
+        //   left: 0px;
+        //   &:hover a{
+        //     font-size:1.08em;
+        //     transition: 0.3s;
+        //   }
+        // }
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          left: -999em;
+          text-align: left;
+        } 
+        &:hover ul{
+          position: absolute;
+          left: 0px;
+          &:hover   a {
+            color: $white;
+            font-size:1.2em;
+          }
+        }
+      }
+    }
+}
+
+
+
+
+
+
+//*****************   SECTION 1   **************************//
+.presentation {
+  margin: 0 100px;
+  text-align: justify;
+  margin-bottom: 100px;
+  
+}
+
+.presentation ~ figure {
+  text-align: center;
+}
+
+main + section {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+// *************     SECTION 2           CHAMBRE            **************************  //
+.chambres {
+  display: grid;
+  grid-gap: 1rem;
+  max-width: 1700px;
+  margin-bottom: 100px;
+}
+ 
+
+
+// *************     CONTACT           **************************  //
+
+
+fieldset {
+  margin-bottom: 15px;
+  padding: 10px;
+}
+ 
+legend {
+  padding: 0px 3px;
+  font-weight: bold;
+  font-size: 30px;
+}
+ 
+
+ 
+ 
+input:focus {
+  background: #eaeaea;
+}
+ 
+textarea {
+  width: 500px;
+}
+ 
+textarea {
+  height: 200px;
+}
+ 
+select {
+  width: 100px;
+}
+ 
+input[type=submit] {
+  width: 150px;
+  padding: 10px;
+  border-radius: 30px;
+  font-size: 15px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.text-form {
+  font-size: 15px;
+}
+
+#form-contact {
+  color: white;
+  input {
+    width: 500px;
+  }
+  label {
+  width: 100px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 6px;
+}
+}
+// *************     MAP **************************  //
+#map {
+  width: 50vw;
+  //z-index: -1;
+}
+#map + article {
+  color: #fff;
+  a {
+  color: #fff;
+  }
+}
+
+.localisation {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 10px;
+}
+#map ~ article{
+  display: flex;
+  align-items: flex-end;
+  padding: 10px;
+}
+
+
+//*********************** SECTION FOOTER ********************************* //
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    .footer__social {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 3em;
+
+      .footer__social-item i{
+        font-size: 40px;
+        color: rgba( #ffffff, $alpha: 0.7);
+        cursor: pointer;
+        transition-duration: 0.7s;
+        &:hover{
+            color: #6262ec;
+        }
+      }
+    }
+}
+
+// **************       BUTTON        ***********************//
+.book {
+  background-color: rgb(246, 238, 238);
+  margin-right: 50px;
+  width: 70px;
+  display: inline-block;
+  height: 40px;
+  justify-content: end;
+} 
+
+.menu-container input {
+ &:hover, &:focus 
+  {
+    --box-shadow-color: rgb(255, 255, 255);
+    box-shadow: 0 0.5em 0.5em -0.4em  var(  --box-shadow-color);
+    transition: 0.3;
+    transform: translateY(-0.35em);
+    background-color: black;
+    color: white;
+    cursor: pointer;
+  }
+
+}
